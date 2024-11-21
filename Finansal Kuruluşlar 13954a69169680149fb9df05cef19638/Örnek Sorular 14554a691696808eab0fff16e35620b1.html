@@ -1,0 +1,684 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Örnek Sorular</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="14554a69-1696-808e-ab0f-ff16e35620b1" class="page sans"><header><h1 class="page-title">Örnek Sorular</h1><p class="page-description"></p></header><div class="page-body"><h3 id="8966a217-58d0-489a-890e-fe89d2723d2b" class="">1. Finansal Piyasalar nedir?</h3><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="9d93cf5f-db27-48de-a190-5be513f66071" class="">Finansal piyasalar, fon fazlası olan birimlerin fonlarını, fon açığı olan birimlere aktararak ekonomik işleyişi sağlayan bir sistemdir.</p></div></details><h3 id="9f31b9e4-4a70-4bc2-977c-60c6c815c40a" class="">2. Finansal Sistem neyi ifade eder?</h3><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="863adf73-914d-422e-ae7c-afb8a9fc9e83" class="">Finansal sistem, finansal araçlar üzerinde işlem yapan piyasalar, kurumlar ve bireylerden oluşan yapıdır.</p></div></details><h3 id="c9dcd46b-f50a-41d1-b334-dd435f2ec54a" class="">3. Tasarruf nedir?</h3><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="a3d27439-45ff-400e-bcf7-ba0808a5084d" class="">Tasarruf, bireylerin gelirlerinin tüketilmeyen kısmıdır ve gelecekteki tüketim için bugünkü tüketimden vazgeçme kararıdır.</p></div></details><h3 id="57d60bbe-4bcb-4f55-b281-605c4880930a" class="">4. Fon fazlası verenler kimlerdir?</h3><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="482036da-7565-47ba-9b78-fc5db41fb0f9" class="">Gelirleri giderlerinden sürekli fazla olan ekonomik birimlerdir.</p></div></details><h3 id="81e13606-c0a7-4097-8554-bc53c7fe078e" class="">5. Fon açığı verenler kimlerdir?</h3><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="125ac2ce-f3ec-4bc7-801b-335827dab5be" class="">Gelirleri giderlerinden az olan, harcamalarını karşılamak veya yatırım yapmak için başkalarının fonlarına ihtiyaç duyan ekonomik birimlerdir.</p></div></details><h3 id="1051f74a-a22f-47b3-8ba0-4f73679a64b7" class="">6. Tersi seçim nedir?</h3><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="2da48f49-f5ba-4cb7-af0c-3f36f66e88f6" class="">Yanlış veya eksik bilgi nedeniyle tarafların yanlış kararlar almasıdır.</p></div></details><h3 id="fc80e56e-d9cb-4971-be5a-eb6cedb5c3e9" class="">7. Ahlaki risk nedir?</h3><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="40e596fb-963e-4de8-8ec5-956cb578e826" class="">Tarafların sözleşmelere uygun davranmaması ve istismar riskinin oluşmasıdır.</p></div></details><h3 id="c37250fe-a641-41ed-bd9d-ad7bf1b16f63" class="">8. Risk nedir?</h3><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="6a7917b8-1646-417b-832e-d4e98a4701b9" class="">Bir karar sonucunda meydana gelebilecek belirsizlik ve dalgalanmalardır. Genellikle matematiksel olasılıklarla ölçülür.</p></div></details><h3 id="fdd21514-6d14-49ae-a8e9-e8b552d932e9" class="">9. Riskten kaçınma nedir?</h3><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="c8e22502-12ca-43e5-a2f7-1ecd284ebabc" class="">Belirsiz çıktılar yerine belirli sonuçları tercih etme durumudur.</p></div></details><h3 id="16be1ae2-fa04-4a2d-bf1f-32a7d44a184b" class="">10. Sistemik risk nedir?</h3><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="96de26ea-6bbf-4831-a2af-13488cacf9da" class="">Finansal sistemin bir kısmında meydana gelen şokların diğer kısımlara yayılmasına neden olan risktir.</p></div></details><h3 id="58efb680-71fe-460d-a510-d2e9c81ff795" class="">11. Finansal araçlara 3 örnek verin.</h3><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="3be821d7-7f8b-4950-a12a-23904ea93a77" class="">• Mevduat<br/>• Kredi<br/>• Sigorta poliçesi<br/></p></div></details><h3 id="768340f6-64ce-45b6-8f10-0c26a4e3c0d0" class="">12. Piyasa başarısızlığı nedir?</h3><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="978a6913-25e7-4f78-a3a6-96a9c1fb820f" class="">Kaynakların etkin bir şekilde dağıtılamaması durumudur. Çarpık bilgi ve tekeller gibi sorunlardan kaynaklanır.</p></div></details><h3 id="d82b6cb2-da94-419a-9bbd-31bc948d131c" class="">13. Devlet düzenlemesinin temel amacı nedir?</h3><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="4fdbe404-97f0-42bb-8957-2fbcd6dbc44a" class="">Piyasa başarısızlıklarını gidermek, sistemik riskleri azaltmak ve yatırımcıları korumaktır.</p></div></details><h3 id="820e19a3-c819-42fa-8606-b57d1b7d39a4" class="">14. Faiz nedir?</h3><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="f761260d-7157-4c56-b871-d94c4e00a227" class="">Borç alınan paranın kullanım bedelidir ve genellikle anapara üzerinden hesaplanır.</p></div></details><h3 id="3cdeca31-55df-4a5c-9100-389dd37c6cef" class="">15. Kredi nedir?</h3><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="30804f70-0213-40d9-927f-c0f0442bf4a1" class="">Bankaların, fon talep edenlere belirli şartlarla ödünç verdiği kaynaklardır.</p></div></details><h3 id="ad1760f7-88c4-436f-96e3-676d774f7e8e" class="">16. Mevduat nedir?</h3><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="8e444914-6cb8-4d08-bf95-1713318e59df" class="">Belirli bir süreyle veya vadesiz olarak bankalara yatırılan paradır.</p></div></details><h3 id="0475953a-6871-4eab-a8d7-866b083d5dfd" class="">17. Kredi türleri nelerdir?</h3><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="fe38b491-6264-4c90-9e37-223984c28f37" class="">• Ticari krediler<br/>• Tüketici kredileri<br/>• Yatırım kredileri<br/></p></div></details><h3 id="04d79c37-246b-4f63-b13a-562eafe7a2a5" class="">18. Gölge bankacılık nedir?</h3><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="f2120ee0-311d-4919-856a-c983a03b0ca5" class="">Bankacılık sisteminin dışında kalan ve regülasyonlara tabi olmayan finansal faaliyetlerdir.</p></div></details><h3 id="522a232a-67ee-4e25-832e-bad4e0826fd4" class="">19. Banka yönetim ilkeleri nelerdir?</h3><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="630210cd-dbb2-451e-8a01-93a7b99f95d1" class="">• Likidite yönetimi<br/>• Aktiflerin yönetimi<br/>• Yükümlülüklerin yönetimi<br/>• Sermaye yeterliliği yönetimi<br/></p></div></details><h3 id="676244f4-4037-4d40-8a58-26b6f1c512ee" class="">20. Basel kurallarının amacı nedir?</h3><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="c65cb8cf-41f4-4705-aa6b-5a3077c17b62" class="">Bankaların sermaye yeterliliğini ve risk yönetimini düzenlemek için uluslararası standartlar oluşturur.</p></div></details><h3 id="4e2b821c-f880-40f4-b5e8-48fe8095ace7" class="">21. Tasarruf paradoksu nedir?</h3><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="7b4f670f-5d1e-4792-aad8-f41a7809ddac" class="">Bireysel tasarrufların artmasının ekonomik durgunluğa yol açabilmesidir.</p></div></details><h3 id="005e1dfe-5e2a-4016-80e0-3b1300421231" class="">22. Likidite yönetimi nedir?</h3><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="20ccc3bb-bab0-479e-b230-53ab21556bb6" class="">Bankaların kısa vadeli yükümlülüklerini karşılamak için varlıklarını yönetmesidir.</p></div></details><h3 id="3177ec4e-7aac-45ca-8355-86601ecd1525" class="">23. Çarpık bilgi nedir?</h3><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="0cd66750-de32-460e-b3d0-8cdc2274387c" class="">Tarafların eşit bilgiye sahip olmaması durumudur. Tersi seçim ve ahlaki risk yaratabilir.</p></div></details><h3 id="ea6b7290-338e-4493-8f53-3f625fff248e" class="">24. Sermaye piyasası nedir?</h3><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="abe7bfbc-dc80-436d-ba9d-bd7a321b297a" class="">Orta ve uzun vadeli borçlanma araçlarının işlem gördüğü finansal piyasadır.</p></div></details><h3 id="9fbffcdd-85f7-4383-bafb-007fa0312666" class="">25. Katılım bankacılığı nedir?</h3><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="c6506258-a7a9-42f4-8e9f-996675bcfb41" class="">Faizsiz finans ilkeleriyle çalışan bankacılık türüdür. Kar-zarar ortaklığı temeline dayanır.</p></div></details><h3 id="3f808b68-0e1b-44ae-92a7-49076784a0d8" class="">26. Sigorta poliçesi nedir?</h3><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="82fc62c4-8e52-47c3-9985-b59d34e6807f" class="">Bir koşula bağlı olarak tarafların yükümlülüklerini düzenleyen finansal araçtır.</p></div></details><h3 id="9cffabf3-0b29-475d-80de-d8b47f3e3e82" class="">27. Finansal sistemin temel işlevleri nelerdir?</h3><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="0f011b1e-3a6c-4199-a8aa-f5a88a64c11b" class="">•	Kaynakların hareketliliğini sağlamak<br/>•	İşlem maliyetlerini azaltmak<br/>•	Riskin dağılımını gerçekleştirmek<br/>•	Yatırımları gözetmek ve kurumsal yönetişim sağlamak<br/></p></div></details><h3 id="e679e348-2915-45fd-8483-e7028ad31157" class="">28. Piyasa başarısızlığının temel nedenleri nelerdir?</h3><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="d9321583-4ffa-4d3d-bad1-ca07f50b7e68" class="">•	Dışsallıklar<br/>•	Tekeller<br/>•	Çarpık bilgi<br/>•	Kamusal mallar<br/>•	Gelir ve servet eşitsizlikleri<br/></p></div></details><h3 id="48d665ec-a16b-4e15-afa1-b19b3ba238ce" class="">29. Sendikasyon kredisi nedir?</h3><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="515f96c2-0743-4691-b2f9-4d263a5961a3" class="">Birden fazla bankanın bir araya gelerek büyük bir kredi talebini karşılamak için oluşturduğu kredi sistemidir</p></div></details><h3 id="d61783c4-bc01-4a91-ad1f-40712196283c" class="">30. Türev araçlar nelerdir?</h3><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="3c0e9a56-31a3-4172-b68c-99fc6b770e1c" class="">Vadeli işlem sözleşmeleri, opsiyonlar ve diğer türev finansal araçlardır</p></div></details><h3 id="b58c9b9c-3c5c-45c2-b232-92a7e7b957e3" class="">31. Sermaye birikimi nedir?</h3><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="06c49395-def1-40ba-9586-002b050f6d3a" class="">Serveti artırmak veya yeniden dağıtmak için yapılan yatırımlardır. Sabit sermaye, finansal varlıklar veya gayrimenkul gibi alanlara yatırım yapılabilir</p></div></details><h3 id="8cf66370-3974-4ec5-a71d-74f33110a502" class="">32. Bankaların gelir kaynağı nedir?</h3><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="dea20558-0cb5-44db-bbe4-aa1a72f76e40" class="">Mevduata ödedikleri faiz ile kredilerden aldıkları faiz arasındaki farktır</p></div></details><h3 id="e9c6fc9b-0f0b-483f-be58-d978060341ed" class="">33. Banka krizlerinin temel nedeni nedir?</h3><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="74998b07-2c3a-459d-ad2c-d8a6e6fbe42c" class="">Bankaların likidite sorunları ve aktif değer kayıplarıdır. Örneğin, mevduat sahiplerinin topluca paralarını çekmesi bu risklerden biridir</p></div></details><h3 id="04516ea9-e0a4-4903-b3ec-6dae408e937a" class="">34. Sistemik riskin çeşitleri nelerdir?</h3><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="8516ef3e-033d-4b3f-a2a0-dbf8c245510d" class="">•	Makroekonomik şoklar<br/>•	Mikro düzeyde domino etkisi<br/>•	Sistemin tamamına yayılan şoklar<br/></p></div></details><h3 id="1a95f7f2-5808-49eb-9f3b-929fb0a07497" class="">35. Vadesine göre finansal piyasalar nasıl sınıflandırılır?</h3><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="f38e329c-f601-4837-9e9d-2a378618d2d4" class="">•	Para piyasaları (kısa vadeli)<br/>•	Sermaye piyasaları (orta ve uzun vadeli)<br/></p></div></details><h3 id="270913c2-92fa-40f2-8f55-1455afb2e16e" class="">36. Kamunun aydınlatılması ilkesi nedir?</h3><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="375fe811-4f05-4bcd-8407-57e60c319873" class="">Finansal piyasalarda şeffaflığı sağlamak ve bilgi asimetrisini azaltmak için uygulanan bir düzenleme ilkesidir</p></div></details><h3 id="7ee62bec-0911-4998-a3d7-bbcd6d88fa2d" class="">37. Banka likidite riskini nasıl yönetir?</h3><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="f73bc3aa-3751-44ba-978d-539be009c823" class="">•	Likit varlıklardan faydalanarak<br/>•	Merkez bankasından borç alarak<br/>•	Bankalararası piyasalardan fon sağlayarak<br/></p></div></details><h3 id="3b74c9b2-2479-40b5-b2be-6226a5a2b4e2" class="">38. Gölge bankacılık hangi riskleri barındırır?</h3><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="dd94c869-d515-4f0d-b6e8-3bbf042a265e" class="">•	Kredi riskini başkalarına devretme<br/>•	Düzenlemelere tabi olmama<br/>•	Likidite sorunları yaratma<br/></p></div></details><h3 id="598ee5a0-8fe5-44dc-be1f-3c0d0c4bac47" class="">39. Katılım bankalarının temel ilkeleri nelerdir?</h3><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="46359b45-f488-44e7-8c07-fe6d10f5a884" class="">•	Faizsiz finans<br/>•	Kar-zarar ortaklığı<br/>•	Belirsizlik ve spekülasyonun yasaklanması<br/></p></div></details><h3 id="51a09698-69e8-4329-927a-23be4b7f7ef4" class="">40. Finansal piyasalarda dışsallıklar nedir?</h3><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="278200aa-833b-4d27-bd5a-21160794260d" class="">Bir ekonomik işlemin üçüncü taraflar üzerinde yarattığı pozitif veya negatif etkidir</p></div></details><h3 id="9b325c16-c1d0-4c9f-995f-3fee5f7f29d7" class="">41. Bankalararası para piyasası ne amaçla kullanılır?</h3><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="837d6f37-24db-4b99-a1dc-0afe4c9a1e60" class="">Bankaların likidite ihtiyaçlarını karşılamak ve merkez bankası aracılığıyla kısa vadeli borçlanma sağlamak için kullanılır</p></div></details><h3 id="e7aac4ed-081e-48ce-9222-5ddb3b5d3613" class="">42. Faiz çeşitleri nelerdir?</h3><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="1fae9f99-058b-4f71-a8cc-e15ac6e5683d" class="">•	Basit faiz<br/>•	Bileşik faiz<br/>•	Değişken faiz<br/></p></div></details><h3 id="0bc92f45-f519-44a0-a002-0c9add742d14" class="">43. Banka aktif yönetiminde dikkate alınan unsurlar nelerdir?</h3><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="792a21a4-0e81-4938-8ee5-afe5ca6ba456" class="">•	Yüksek getiri sağlayacak menkul kıymetlere yatırım yapmak<br/>•	Portföy çeşitlendirmesi yapmak<br/>•	Geri ödeme riski düşük krediler vermek<br/></p></div></details><h3 id="7bffdcaa-0f59-4492-af09-c6360a882157" class="">44. Bankaların pasif yönetiminde önemli unsurlar nelerdir?</h3><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="e89fe8a9-99d3-4fd4-8bb7-b1ac26cd5905" class="">•	Mevduat toplama<br/>•	Borçlanma araçları ihraç etme<br/>•	Kısa vadeli likidite planlaması yapma<br/></p></div></details><h3 id="292853da-5521-43f2-9481-6a529716d43c" class="">45. Bankaların ekonomik rolü nedir?</h3><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="3170d879-d129-4634-b68d-2ba6d056f518" class="">Fon fazlası olan birimlerden topladığı kaynakları, fon açığı olan birimlere aktararak ekonomik işleyişi sağlamaktır</p></div></details><h3 id="2b2141db-9669-4755-8cda-5a81e71e6f03" class="">46. Likidite yönetiminde karşılaşılan sorunlar nelerdir?</h3><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="996bd565-013c-40fd-b4c9-c05269d2882e" class="">•	Yüksek likit varlık tutma maliyetleri<br/>•	Kredilere fazla ağırlık verme durumunda likidite açığı oluşması<br/></p></div></details><h3 id="39efd1c4-482a-45b8-a5ab-68d61e2c2f93" class="">47. Piyasalarda düzenleme neden gereklidir?</h3><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="bc7b1137-9624-4abd-8203-4a2ac468b43c" class="">Sistemik risklerin önlenmesi, şeffaflığın artırılması ve yatırımcıların korunması için gereklidir</p></div></details><h3 id="ab87a51f-2d04-4118-8179-31d355ccb8dc" class="">48. Bankalar neden kredi verirken teminat ister?</h3><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="c805bdd2-9af0-40db-9a39-47c54a184365" class="">Kredinin geri ödenmemesi durumunda zararlarını karşılayabilmek için teminat, kefil veya ipotek talep ederler</p></div></details><h3 id="fe2f2282-123a-40aa-8635-de5ef0fc0be0" class="">49. Finansal piyasalarda bilgi sorunsalının etkisi nedir?</h3><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="273e0146-63cd-4ed4-a84f-c4df1d87f391" class="">Tersi seçim ve ahlaki risk sorunlarına yol açar ve güven eksikliği oluşturur</p></div></details><h3 id="415e1b4b-dbeb-422b-bd11-212effa847d6" class="">50. Ekonomik birimler tasarruf yaparken hangi faktörleri göz önüne alır?</h3><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="fc5f197a-c975-466e-9974-bca4fe91d83e" class="">Tasarruflarını gelecekte daha fazla tüketim veya yatırım imkanı sağlamak için yaparlar. Ayrıca gelir-gider dengeleri de bu kararı etkiler</p></div></details></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
