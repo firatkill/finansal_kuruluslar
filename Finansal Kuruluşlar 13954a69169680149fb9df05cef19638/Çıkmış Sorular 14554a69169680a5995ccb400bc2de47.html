@@ -1,0 +1,684 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Çıkmış Sorular</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="14554a69-1696-80a5-995c-cb400bc2de47" class="page sans"><header><h1 class="page-title">Çıkmış Sorular</h1><p class="page-description"></p></header><div class="page-body"><h3 id="8ef6149e-37ce-4bd9-9c15-27159f781116" class=""><strong>Ahlaki risk nedir ? Finansal piyasalarda nasıl ortaya çıkar ne azaltılır ? (2021)</strong></h3><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="878e3511-8597-4302-92ee-1368b1c4485d" class="">Ahlaki risk, bir ekonomik birimin kendi eylemlerinin sonuçlarından tamamen sorumlu olmaması durumunda, bu eylemleri nedeniyle başkalarını zarara uğratma ihtimalinin artmasıdır. Finansal piyasalarda, taraflardan birinin diğerine kıyasla daha fazla bilgiye sahip olması (asimetrik bilgi) nedeniyle ortaya çıkar. Örneğin, bir bankanın mevduat sigortası nedeniyle gereğinden fazla risk alması ahlaki riske örnek gösterilebilir.</p><p id="2b9db9ec-18ee-418f-ad44-4526d07f9505" class="">Ahlaki riski azaltmak için:</p><ul id="10ad5970-80f9-4a0a-bd8e-72d6b8c980b5" class="bulleted-list"><li style="list-style-type:disc">Düzenlemeler ve denetimler yoluyla piyasa gözetimi artırılabilir.</li></ul><ul id="39615ff5-7940-4845-9297-6ed33c299f73" class="bulleted-list"><li style="list-style-type:disc">Şeffaflık sağlanarak asimetrik bilgi sorunları giderilebilir.</li></ul><ul id="ef06732a-8ab3-49a3-b109-0614f87eb79b" class="bulleted-list"><li style="list-style-type:disc">Tarafların çıkar çatışmalarını azaltacak önlemler alınabilir</li></ul></div></details><h3 id="02b4cff7-d6a7-4f02-9922-b1d180c96094" class=""><strong>Piyasaların avantajları arasında sayılan &quot;ekonomik birimlerin kendi kar zararlarını&quot; taşımak zorunda olmaları bedavacılık açısından nasıl yorumlanabilir (2012)</strong></h3><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="227a9cab-4e2b-43e9-88f5-0457bee9766f" class="">Ekonomik birimlerin kar-zarar sorumluluğu taşımaları, kaynakların etkin kullanılmasını sağlarken bedavacılığı önler. Ancak, kamusal müdahale veya zorunlu düzenlemelerin eksikliği durumunda bazı bireyler veya kurumlar riski başkalarına yıkmaya çalışabilir. Örneğin, mevduat sigortası uygulamalarında bankaların aşırı risk alması, karlarının kendilerine, zararlarının ise sigorta fonuna veya kamuya kalmasına neden olabilir. Bu, bedavacılığı teşvik edebilir ve düzenleme ile önlenmelidir.</p></div></details><h3 id="2a2281c4-8257-4bed-8523-aa3411acbf6b" class=""><strong>Borç alanların (özellikle bankalardan) kendilerinin de belirli boyutlarda öz sermaye taşımaları niçin istenir ? İstismar riski açısından değerlendiriniz. (2012)</strong></h3><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="7d8b8b19-2baa-4212-adc9-6907492c9198" class="">Borç alanların belirli bir öz sermaye taşımaları, riskin bir kısmını üstlenmelerini sağlar. Bu durum:</p><ul id="66e84172-97ce-4171-a8d4-cbac4f53a9fb" class="bulleted-list"><li style="list-style-type:disc">Aşırı borçlanmayı engeller.</li></ul><ul id="27a535ea-61df-464c-8d5b-f5620ad8f084" class="bulleted-list"><li style="list-style-type:disc">Kararların daha dikkatli alınmasını teşvik eder.</li></ul><ul id="f6d0086e-ab1a-4527-891e-072c88586456" class="bulleted-list"><li style="list-style-type:disc">İstismar riski açısından, tamamen borçlanma ile fonlanan bir projede borç alan tarafın riski daha az olabilir ve bu durum kaynak sağlayanların zarara uğramasına neden olabilir. Öz sermaye, borç alanın kayıplara ortak olmasını sağlayarak istismar riskini azaltır</li></ul></div></details><h3 id="c1dfc4d0-8973-4ca4-bf64-e2124b5ce8b5" class=""><strong>Evrensel bankacılık ile ihtisas (uzmanlaşmış) bankacılığın farkları nelerdir ? (2012)</strong></h3><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="15e86d32-b5cd-4e33-b0ac-7a3b3bf1321b" class=""><em>Evrensel Bankacılık:</em></p><p id="422b8fc8-109c-45f5-b08f-634dd3ca42b7" class="">Bankaların hem ticari hem yatırım faaliyetleri yapabildiği sistemdir. Türkiye, genel olarak evrensel bankacılık sistemine daha yakındır.</p><p id="001f2d8d-f17b-4677-8e98-7f16ebe885b2" class=""><em>İhtisas Bankacılığı:</em></p><p id="301bb6a4-f5c8-49c0-8731-c609035b9be7" class="">Ticari ve yatırım faaliyetleri ayrılmıştır. Bu modelde, örneğin Amerika&#x27;da 1929 Bunalımı sonrası ticari bankalar ve yatırım bankaları ayrı düzenlenmiştir.</p></div></details><h3 id="406860f7-1916-40fb-8d74-481b0ca656f8" class=""><strong>Sendikasyon niçin yapılır tartışınız (2012)</strong></h3><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="cdb70e7b-e8b4-4c10-866b-69b4dff96faf" class="">Sendikasyon, bir grup bankanın bir araya gelerek bir borçlanma talebini karşılamasıdır.</p><p id="bfd1074a-3842-4e6b-ad94-65ac13854647" class="">Amaçları:</p><ul id="f3e5bba6-0186-43a2-884c-12d9ea191249" class="bulleted-list"><li style="list-style-type:disc">Büyük miktarda kredi ihtiyacını karşılamak.</li></ul><ul id="accb1ca4-de1d-4f73-856b-a538400d4149" class="bulleted-list"><li style="list-style-type:disc">Riskin dağıtılması ve azaltılması: Bu yöntemle, bir bankanın tek başına üstlenemeyeceği büyüklükteki kredi riski paylaşılır</li></ul></div></details><h3 id="8e1d0b0b-7bdf-4ee3-923b-d5d2dc90a047" class=""><strong>Doğrudan ve dolaylı finansal piyasalar (veya finansman) ne demektir ? Türkiye&#x27;de bu piyasaların düzenleyici otoriteleri kimdir ve birbirlerinde hangi görev itibariyle farklılaşırlar? (2016)</strong></h3><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="48f9c7fa-6a70-4365-8550-ddd05fc95a26" class=""><em>Doğrudan Finansman:</em></p><p id="48a0e498-e999-4b3f-8ce3-aace09ab80cf" class="">Fon arz eden ile fon talep edenin doğrudan etkileşim kurduğu piyasalardır (örneğin sermaye piyasaları).</p><p id="0e9cc970-530d-4593-9962-f9d623e31efa" class=""><em>Dolaylı Finansman:</em></p><p id="5d9d01f7-4616-4a19-aeba-abc5ac6eba3f" class="">Bankalar gibi aracılar vasıtasıyla fonların aktarıldığı piyasalardır.</p><p id="124f8f4d-587e-4e93-8c7a-bcdcab58ea61" class=""><em>Türkiye&#x27;de Düzenleyici Otoriteler:</em></p><ul id="8eece8f7-97bb-41c6-80c4-6c93ad98a75d" class="bulleted-list"><li style="list-style-type:disc">SPK (Sermaye Piyasası Kurulu): Doğrudan finansmanı düzenler ve denetler.</li></ul><ul id="441d1461-60b5-4ca0-9143-6c4814f9144f" class="bulleted-list"><li style="list-style-type:disc">BDDK (Bankacılık Düzenleme ve Denetleme Kurumu): Dolaylı finansmanı düzenler ve denetler.</li></ul><p id="b1d3c820-5ed5-4c9e-869c-62b5c0455e4d" class="">Görev farkı, doğrudan finansmanda menkul kıymetlerin düzenlenmesi, dolaylı finansmanda ise bankaların düzenlenmesi ve gözetimi üzerinedir</p></div></details><h3 id="397406ae-3cbc-4432-8b4f-781291594730" class=""><strong>Finansal piyasalarda &quot;düzenleme&quot; niçin yapılır ? (2016)(2012)</strong></h3><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="4096ca3c-dd2a-4f31-b9d1-bc27dc6d42c3" class="">Düzenleme, piyasalarda güven ve istikrar sağlamak için yapılır. Amaçları:</p><ul id="3e4366d2-1bb3-4267-a971-d3f038936f9e" class="bulleted-list"><li style="list-style-type:disc">Çarpık bilgi ve sistemik riskleri azaltmak.</li></ul><ul id="e4f75602-8e5f-4fbc-bb1f-2da06d6e306d" class="bulleted-list"><li style="list-style-type:disc">Yatırımcıların korunması.</li></ul><ul id="fbab4b8a-978d-4d6c-af07-0ff9d40980a1" class="bulleted-list"><li style="list-style-type:disc">Rekabetin ve şeffaflığın artırılması.</li></ul><ul id="04f5341a-b50a-41cf-9b9c-9eaaed4c2585" class="bulleted-list"><li style="list-style-type:disc">Bu düzenlemelerle, piyasa başarısızlıklarının ve krizlerin önüne geçilmeye çalışılır</li></ul></div></details><h3 id="8b26e906-aae2-4dab-94e4-91fc74b73a74" class=""><strong>İşlem maliyeti nedir ? Etkilerini azaltmak için ne yapılabilir ? (2016)</strong></h3><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="fbe750f8-6a6f-4b6a-b597-654279bd804c" class="">İşlem maliyeti, bir finansal işlem sırasında araştırma, müzakere ve sözleşme yapma gibi faaliyetlerin yarattığı toplam maliyettir.</p><p id="98a0f422-9458-411f-9561-63ab57eae131" class="">Etkilerini azaltmak için:</p><ul id="2a85ca04-bec6-4248-b0f0-a95febf2301c" class="bulleted-list"><li style="list-style-type:disc">Şeffaf bilgi akışı sağlanabilir.</li></ul><ul id="ecb74559-8305-481c-8587-8744c32d956f" class="bulleted-list"><li style="list-style-type:disc">Teknolojik altyapı iyileştirilebilir.</li></ul><ul id="70b243a0-15e6-47ea-9505-f6781f7bd333" class="bulleted-list"><li style="list-style-type:disc">Standart sözleşmeler ve düzenlemeler oluşturulabilir</li></ul></div></details><h3 id="e8b0b581-f226-4d99-bfcb-65060a6d6d38" class=""><strong>Bankaların varlık/kredi kısıtlaması ne demektir ? Düzenlemelerde niçin bu kısıtlamaya gidilir ?</strong></h3><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="dd78b27c-1b88-4ee9-8111-b8fab77e12cc" class="">Bankaların varlıklarını ya da kredilerini sınırlama, riskleri kontrol altında tutmak için alınan bir düzenleme tedbiridir.</p><p id="97510ea0-f16f-44b8-aca5-a0e3ccd9064b" class="">Nedenler:</p><ul id="b71c3991-d6b4-4609-9c45-50643c5e8454" class="bulleted-list"><li style="list-style-type:disc">Sistemin aşırı risk almasını önlemek.</li></ul><ul id="03d8e080-02c0-4bbe-82f0-fa733d98c771" class="bulleted-list"><li style="list-style-type:disc">Sistemik risklerin yayılmasını engellemek.</li></ul><ul id="2e1aeb39-f9b9-4bef-8053-7844d68f7401" class="bulleted-list"><li style="list-style-type:disc">Bu tür düzenlemeler, finansal istikrarı sağlamak amacıyla uygulanır</li></ul></div></details><h3 id="47c8527d-c9d5-4333-874d-8b3379d24ebc" class=""><strong>Bedavacılık ne demektir bilgi sorunu ile ilişkisini tartışınız (2016)</strong></h3><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Cevap:</summary><div class="indented"><p id="feb0a782-ac33-4f51-a60a-b50c3e95c627" class="">Bedavacılık, bireylerin başkalarının katkılarından faydalanmaya çalışmasıdır. Örneğin, zorunlu sigorta kapsamındaki bireylerin bilinçli şekilde riskli davranışlar sergilemesi bedavacılığa örnektir.</p><p id="f4a1d2ff-e1d0-4156-accd-f3ab2172c23b" class="">Bilgi sorunu, bu durumu daha da kötüleştirir çünkü bilgi eksikliği olan taraflar (örneğin sigortacılar), bedavacı davranışları fark etmekte zorlanabilir. Bu sorun düzenleme ve denetim ile hafifletilebilir.</p></div></details></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
